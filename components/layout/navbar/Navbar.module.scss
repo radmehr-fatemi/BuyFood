@@ -20,7 +20,7 @@
 
 .field1 {
     a {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 600;
         color: $color-green;
     }
@@ -30,6 +30,7 @@
     color: $color-black;
 }
 
+
 @include md() {
     .navbar {
         width: 60vw;
@@ -37,7 +38,6 @@
     }
 
     .field1 a {
-        font-size: 1.4rem;
         font-weight: 700;
     }
 
