@@ -1,0 +1,41 @@
+@import "../../../styles//variables.scss";
+@import "../../../styles//Keyframes.scss";
+
+.whyUs {
+    width: 100%;
+    padding: .8rem;
+}
+
+.field1 {
+    text-align: start;
+
+    h3 {
+        color: $color-green;
+    }
+}
+
+.field2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 140px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 12px $color-boxShadow;
+    border-radius: 4px;
+    margin: .4rem ;
+}
+
+
+@include md {
+    .card {
+        margin: .4rem 2rem;
+    }
+}

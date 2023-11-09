@@ -1,0 +1,12 @@
+$color-green:rgb(51, 190, 120);
+$color-green2:rgb(58, 214, 136);
+$color-black: rgb(89, 121, 104);
+$color-white: #fff;
+$color-textShadow:rgb(113, 239, 174);
+$color-boxShadow:rgb(170, 202, 185);
+
+@mixin md() {
+    @media (min-width: 768px) {
+        @content
+    }
+}

@@ -1,0 +1,28 @@
+@import "../../../styles//variables.scss";
+@import "../../../styles//Keyframes.scss";
+
+.instruction {
+    text-align: start;
+    padding: 0 .8rem;
+    animation: Show .3s;
+
+    h3 {
+        color: $color-green;
+    }
+
+    .list {
+        // width: 100%;
+    }
+
+    li {
+        width: 100%;
+        list-style-type: none;
+        margin: .6rem 0;
+
+        &::before {
+            content: "• ";
+            color: #53c60b;
+        }
+
+    }
+}

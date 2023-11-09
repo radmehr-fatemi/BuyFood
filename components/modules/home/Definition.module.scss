@@ -1,0 +1,12 @@
+@import "../../../styles//variables.scss";
+@import "../../../styles//Keyframes.scss";
+
+.definition {
+    text-align: start;
+    padding: 0 .8rem;
+    animation: Show .3s;
+    
+    h3 {
+        color: $color-green;
+    }
+}

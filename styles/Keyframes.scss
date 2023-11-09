@@ -1,0 +1,25 @@
+@keyframes Show {
+    0% {
+        opacity: .2;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes ShowScrollTop {
+    0% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes ShowWight {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes ShowHeight {
+    0% {
+        height: 0;
+    }
+}
+

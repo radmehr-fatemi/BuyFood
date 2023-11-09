@@ -1,0 +1,13 @@
+@import "../../../styles//variables.scss";
+@import "../../../styles//Keyframes.scss";
+
+.restriction {
+    animation: Show .3s;
+    text-align: start;
+    padding: .4rem .8rem;
+
+    h3 {
+        color: $color-green;
+    }
+
+}
