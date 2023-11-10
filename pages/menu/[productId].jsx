@@ -1,5 +1,11 @@
+import { useRouter } from 'next/router';
+
 const Details = ({ productData }) => {
-    return (
+
+    const router = useRouter()
+    if (router.isFallback) return <h1>Loading...</h1>
+
+    if (Object.keys(productData).length) return (
         <div>
             <h1> {productData.name} </h1>
             <h1> {productData.id} </h1>
@@ -8,25 +14,25 @@ const Details = ({ productData }) => {
 };
 
 export const getStaticPaths = async () => {
-    const res = await fetch( `${process.env.BASE_URL}/data` );
+    const res = await fetch(`${process.env.BASE_URL}/data`);
     const data = await res.json();
-    const products = data.slice( 0 ,10 );
+    const products = data.slice(0, 10);
 
-    const paths = products.map( product => ({ params: { productId: product.id.toString() } }) )
+    const paths = products.map(product => ({ params: { productId: product.id.toString() } }))
     return {
         paths,
-        fallback: "blocking",
+        fallback: true,
     }
 }
 
 export const getStaticProps = async (context) => {
     const { productId } = context.params;
-    const res = await fetch( `${process.env.BASE_URL}/data/${productId}` )
+    const res = await fetch(`${process.env.BASE_URL}/data/${productId}`)
     const productData = await res.json();
 
     return {
         props: {
-            productData
+            productData,
         }
     }
 }
