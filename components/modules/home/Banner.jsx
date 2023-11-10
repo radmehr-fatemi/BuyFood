@@ -14,7 +14,7 @@ const Banner = () => {
                     Uber in 2014. Meals are delivered by couriers using cars, scooters,
                     bikes, or on foot.
                 </p>
-                <Link href="/mennu" >See All</Link>
+                <Link href="/menu" >See All</Link>
             </div>
 
             <div className={ styles.field2 } >
