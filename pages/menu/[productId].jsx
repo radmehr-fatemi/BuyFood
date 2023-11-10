@@ -1,6 +1,10 @@
-import React from 'react';
+import { useRouter } from 'next/router';
 
 const Details = ({ productData }) => {
+
+    const router = useRouter()
+    if ( router.isFallback ) return <h1>Loading...</h1>
+    
     return (
         <div>
             <h1> {productData.name} </h1>
