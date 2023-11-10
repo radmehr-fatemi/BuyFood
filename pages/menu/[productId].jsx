@@ -4,6 +4,7 @@ const Details = ({ productData }) => {
     return (
         <div>
             <h1> {productData.name} </h1>
+            <h1> {productData.id} </h1>
         </div>
     );
 };
