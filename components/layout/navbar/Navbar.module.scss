@@ -11,10 +11,6 @@
     a {
         padding: .6rem;
         display: inline-block;
-
-        &:hover {
-            text-shadow: 2px 2px 4px $color-textShadow;
-        }
     }
 }
 
@@ -35,6 +31,12 @@
     .navbar {
         width: 60vw;
         margin: 0 auto;
+
+        a {
+            &:hover {
+                text-shadow: 2px 2px 4px $color-textShadow;
+            }
+        }
     }
 
     .field1 a {

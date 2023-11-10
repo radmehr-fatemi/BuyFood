@@ -1,16 +1,14 @@
 import { useRouter } from 'next/router';
 
+//Component
+import DetailsPage from '../../components/templates/details/DetailsPage';
+
 const Details = ({ productData }) => {
 
     const router = useRouter()
     if (router.isFallback) return <h1>Loading...</h1>
 
-    if (Object.keys(productData).length) return (
-        <div>
-            <h1> {productData.name} </h1>
-            <h1> {productData.id} </h1>
-        </div>
-    );
+    if (Object.keys(productData).length) return <DetailsPage { ...productData } />
 };
 
 export const getStaticPaths = async () => {

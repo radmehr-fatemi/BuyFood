@@ -1,0 +1,164 @@
+@import "../../../styles/Keyframes.scss";
+@import "../../../styles/variables.scss";
+
+.details {
+    max-width: 1600px;
+    width: 100vw;
+    text-align: start;
+    padding: 0 2rem;
+
+    h3 {
+        border-bottom: 2px solid $color-green ;
+        width: fit-content;
+        margin-bottom: .8rem;
+        padding: 0 .4rem;
+        color: #111;
+        font-size: 1.3rem;
+    }
+}
+
+.banner {
+    width: 100%;
+    animation: Show .3s;
+
+    .field1 {
+        text-align: center;
+        animation: Show .3s;
+
+        img {
+            width: 100%;
+            border-radius: 4px;
+            margin: auto;
+            animation: Show .3s;
+        }
+    }
+
+    .field2 {
+        p {
+            display: flex;
+            align-items: center;
+        }
+
+        h5 {
+            background: linear-gradient(to right top ,red ,rgb(161, 58, 58));
+            color: $color-white;
+            text-align: center;
+            padding: .2rem;
+            width: 200px;
+            margin: auto;
+            border-radius: 2px;
+        }
+    }
+}
+
+.introduction {
+    width: 100%;
+    text-align: start;
+    animation: Show .3s;
+}
+
+.detailsField {
+    animation: Show .3s;
+    h4 {
+        color: $color-green;
+        font-size: 1.2rem;
+        margin: 0;
+        margin-top: 1.2rem;
+    }
+
+    li {
+        list-style-type: none;
+
+        &::before {
+            content: ".";
+            font-size: 3rem;
+            line-height: .8rem;
+            color: $color-green;
+            margin-right: .2rem;
+        }
+
+    }
+    
+    span {
+        color: #787777;
+        font-size: .9rem;
+        margin-left: .4rem;
+    }
+}
+
+.introduction {
+    @extend.detailsField;
+}
+
+.recipe {
+    animation: Show .3s;
+    h4 {
+        font-size: 1.2rem;
+        color: $color-green;
+        margin: 1rem 0 .6rem 0;
+    }
+
+    li {
+        list-style-type: none;
+        padding: 0 .4rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    span {
+        margin-right: .4rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: .2rem;
+    }
+
+    .couple {
+        background-color: rgb(131, 255, 131);
+    }
+    .odd {
+        background-color: rgb(183, 255, 174);
+    }
+}
+
+.button {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        border: none;
+        background-color: $color-green;
+        color: $color-white;
+        width: 90%;
+        border-radius: 4px;
+        padding: .3rem;
+        cursor: pointer;
+    }
+}
+
+// -----------------768px----------------
+@include md {
+    .details {
+        width: 60vw;
+        margin: 0 auto;
+    }
+    
+    .banner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .field1 {
+        width: 40%;
+        margin: 2rem 2rem 0 0;
+    }
+
+    .button button {
+        &:hover {
+            background-color: $color-green2;
+        }
+    }
+}
