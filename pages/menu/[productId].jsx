@@ -1,10 +1,4 @@
-import { useRouter } from 'next/router';
-
 const Details = ({ productData }) => {
-
-    const router = useRouter()
-    if ( router.isFallback ) return <h1>Loading...</h1>
-    
     return (
         <div>
             <h1> {productData.name} </h1>
@@ -21,7 +15,7 @@ export const getStaticPaths = async () => {
     const paths = products.map( product => ({ params: { productId: product.id.toString() } }) )
     return {
         paths,
-        fallback: true,
+        fallback: "blocking",
     }
 }
 
