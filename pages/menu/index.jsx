@@ -8,7 +8,6 @@ const Menu = ({ data }) => {
 export const  getStaticProps = async () => {
     const res = await fetch( `${process.env.BASE_URL}/data` );
     const data = await res.json();
-    console.log(data)
 
     return {
         props: {
