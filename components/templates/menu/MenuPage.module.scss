@@ -1,0 +1,34 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/Keyframes.scss";
+
+.menuPage {
+    max-width: 1600px;
+
+    h3 {
+        border-bottom: 1px solid black;
+        width: 80%;
+        margin: .4rem auto;
+        animation: Show .3s;
+    }
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    height: calc(100vh - 120px);
+}
+
+@include md {
+    .menuPage {
+        width: 60vw;
+        margin: 0 auto;
+    }
+
+    .products {
+        overflow: initial;
+        height: fit-content;
+}
+}

@@ -1,0 +1,69 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/Keyframes.scss";
+
+.cardMenu {
+    width: 220px;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 4px 4px 12px $color-boxShadow;
+    margin: 1rem;
+    animation: Show .3s;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+.discount {
+    position: absolute;
+    top: .6rem;
+    right: .6rem;
+    background-color: red;
+    color: $color-white;
+    border-radius: 4px;
+    padding: 0 .1rem;
+}
+
+.fields {
+    width: 100%;
+    height: 50%;
+    padding: .6rem .4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.field1,
+.field2 {
+    height: 30%;
+}
+
+.field1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        @extend.field1
+    }
+}
+
+.field2 {
+    text-align: start;
+    @extend.field1;
+}
+
+.fields a {
+    width: 100%;
+    padding: .2rem;
+    background-color: $color-green;
+    color: $color-white;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: $color-green2;
+    }
+}
