@@ -7,7 +7,7 @@ const Guide = () => {
     return (
         <div className={styles.guide}>
           <Link href="/menu">Menu</Link>
-          <Link href="/categories">Categories</Link>
+          <Link href="/category">Categories</Link>
           <Link href="/">Discount</Link>
         </div>
       );
