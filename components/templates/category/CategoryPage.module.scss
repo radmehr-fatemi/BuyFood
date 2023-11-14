@@ -1,0 +1,75 @@
+@import "../../../styles/Keyframes.scss";
+@import "../../../styles/variables.scss";
+
+.categoryPage {
+    max-width: 1600px;
+    min-height: calc(100vh - 80px);
+    padding: 1rem;
+    animation: Show .3s;
+
+    h3 {
+        padding: 0 .4rem;
+        border-bottom: 2px solid $color-green;
+        width: fit-content;
+        margin: 1rem auto;
+    }
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+
+    select {
+        margin-bottom: .4rem;
+        padding: .2rem;
+        color: $color-green;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 0 0 4px $color-boxShadow;
+
+        &:focus {
+            outline: 1px solid $color-green;
+        }
+    }
+
+    button {
+        border: none;
+        border-radius: 6px;
+        background-color: $color-green;
+        color: $color-white;
+        padding: .2rem;
+    }
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+// ---------------768px---------------
+@include md {
+    .fields {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        select {
+            margin: .4rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button {
+            border-radius: 4px;
+            padding: .3rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-green2;
+            }
+        }
+    }
+}
